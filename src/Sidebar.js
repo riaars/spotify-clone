@@ -7,7 +7,6 @@ import LibraryMusicIcon from '@mui/icons-material/LibraryMusic'
 import { useStateValue } from './DataLayer'
 const Sidebar = () => {
   const [{ playlists }, dispatch] = useStateValue()
-  console.log(playlists)
   return (
     <div className="sidebar">
       <img

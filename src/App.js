@@ -6,6 +6,7 @@ import { getTokenFromUrl } from './spotify'
 import SpotifyWebApi from 'spotify-web-api-js'
 import { useStateValue } from './DataLayer'
 
+const id_discover = '37i9dQZEVXcCA0GBdSoLos'
 const spotify = new SpotifyWebApi()
 
 function App() {
@@ -33,6 +34,13 @@ function App() {
         dispatch({
           type: 'SET_PLAYLISTS',
           playlists,
+        })
+      })
+
+      spotify.getPlaylist(id_discover).then((response) => {
+        dispatch({
+          type: 'SET_DISCOVER_WEEKLY',
+          discover_weekly: response,
         })
       })
     }
