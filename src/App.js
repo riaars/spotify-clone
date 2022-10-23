@@ -12,9 +12,13 @@ function App() {
 
   useEffect(() => {
     const _token = getTokenFromUrl()
+    window.location.hash = ''
     if (_token) {
       setToken(_token.access_token)
-      spotify.setAccessToken(_token)
+      spotify.setAccessToken(_token.access_token)
+      spotify.getMe().then((user) => {
+        console.log(user)
+      })
     }
   }, [])
 
