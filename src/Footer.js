@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="footer_left">
-        <img src="" alt="" />
+        <img src="" alt="" className="footer_albumLogo" />
         <div className="footer_songInfo">
           <h4>Yeh</h4>
           <p>user</p>
