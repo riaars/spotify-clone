@@ -4,6 +4,7 @@
     background-color: rgb(91,87, 115);
     background: linear-gradient(rgba(91,87,115));
     color: white;
+    overflow-y: overlay;
 }
 
 .body_info{
